@@ -1,15 +1,12 @@
-import {View, Text} from 'react-native';
 import React from 'react';
 import {Container, StyledMapView} from './MapScreen.style';
 import useMapScreen from './hooks/useMapScreen';
 import RoundButton from '../../components/RoundButton/RoundButton';
+import {StyledPressable} from '../../components/MapSearchBar/MapSearchBar.style';
 
 const MapScreen = () => {
   const {models, operations} = useMapScreen();
-  console.log(
-    '🚀 ~ file: MapScreen.tsx:8 ~ MapScreen ~ operations:',
-    operations,
-  );
+  const handlePress = () => {};
   return (
     <Container>
       <StyledMapView
@@ -19,7 +16,8 @@ const MapScreen = () => {
         showsMyLocationButton={false}
         showsCompass={false}
       />
-      <RoundButton />
+      <RoundButton icon="menu-outline" />
+      <StyledPressable />
     </Container>
   );
 };
