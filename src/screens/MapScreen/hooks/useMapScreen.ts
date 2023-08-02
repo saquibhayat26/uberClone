@@ -11,8 +11,6 @@ const useMapScreen = () => {
   const [userLocation, setUserLocation] =
     useState<UserLocationChangeEvent['nativeEvent']['coordinate']>();
 
-  console.log('🚀 ~ file: useMapScreen.ts:6 ~ useMapScreen ~ mapRef:', mapRef);
-
   useEffect(() => {
     if (userLocation) {
       mapRef.current?.animateToRegion({
@@ -22,10 +20,6 @@ const useMapScreen = () => {
         longitudeDelta: LONGITUDE_DELTA,
       });
     }
-    console.log(
-      '🚀 ~ file: useMapScreen.ts:24 ~ useMapScreen ~ mapRef:',
-      mapRef,
-    );
   }, [userLocation]);
 
   const handleUserLocationChange = ({

@@ -5,6 +5,7 @@ import type {Shadows} from './shadow';
 
 export const theme = {
   colors,
+  shadows,
 };
 
 declare module '@emotion/react' {

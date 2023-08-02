@@ -2,11 +2,13 @@ import React from 'react';
 import {Container, StyledMapView} from './MapScreen.style';
 import useMapScreen from './hooks/useMapScreen';
 import RoundButton from '../../components/RoundButton/RoundButton';
-import {StyledPressable} from '../../components/MapSearchBar/MapSearchBar.style';
+import MapSearchBar from '../../components/MapSearchBar/MapSearchBar';
 
 const MapScreen = () => {
   const {models, operations} = useMapScreen();
-  const handlePress = () => {};
+  const handlePress = () => {
+    console.log('button pressed');
+  };
   return (
     <Container>
       <StyledMapView
@@ -17,7 +19,8 @@ const MapScreen = () => {
         showsCompass={false}
       />
       <RoundButton icon="menu-outline" />
-      <StyledPressable />
+
+      <MapSearchBar onPress={handlePress} />
     </Container>
   );
 };
