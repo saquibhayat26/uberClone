@@ -19,7 +19,6 @@ const MapScreen = () => {
         showsCompass={false}
       />
       <RoundButton icon="menu-outline" />
-
       <MapSearchBar onPress={handlePress} />
     </Container>
   );

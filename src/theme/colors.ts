@@ -1,7 +1,7 @@
 const pallette = {
   white: '#fff',
   black: '#000',
-  grey: 'rgba(3,34,34,0.8)',
+  grey: 'rgba(34,34,34,0.8)',
 };
 
 export const colors = {

@@ -23,9 +23,10 @@ export const StyledPressable = styled.Pressable(({theme}) => {
     backgroundColor: theme.colors.common.background,
     width: Dimensions.get('window').width - scale(50),
     minHeight: scale(42),
-    alignItems: 'center',
     padding: scale(16),
+    flex: 1,
     flexDirection: 'row',
+    alignItems: 'center',
     ...theme.shadows.primary(theme),
   };
 });
@@ -35,5 +36,6 @@ export const Square = styled.View(({theme}) => {
     width: scale(8),
     height: scale(8),
     backgroundColor: theme.colors.components.mapSearchBar.squareColor,
+    marginRight: scale(22),
   };
 });
